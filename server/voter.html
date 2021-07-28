@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>IEC Voting - Voter</title>
+  </head>
+  <body>
+    <div class="container-fluid" style="padding: 0px; margin: 0px;">
+        <header>
+            <div class="iec-row">
+                <img src="./img/assets/logo.png" alt="" class="logo-small">
+                <h5 style="color: white; align-self: center; height: fit-content;">2021 ONLINE VOTING</h5>
+            </div>
+        </header>
+        <div class="main-container dotted">
+            <div class="iec-col" style="align-items: center;">
+                <div class="avatar-large "><h6 id="voter-avatar" style="height: fit-content;align-self: center; font-size: 2em; color: ghostwhite">A</h6></div>
+                <div class="h-space"></div>
+                <div class="col" style="padding: 8px; text-align: center;">
+                    <h6 id="voter-name">Asanda Ngibongeleni Mkhize</h6>
+                    <h6 id="voter-id-number" class="subtext-light">ID NUMBER: 990105*****83</h6>
+                </div>
+                <div class="h-l-space"></div>
+                <div class="iec-col" style="min-width: 400px;">
+                    <div class="col" style="padding: 8px">
+                        <h6>Ward</h6>
+                        <h6 id="voter-ward-id" class="subtext-light">Newcastle : 765</h6>
+                    </div>
+                    <div class="h-space"></div>
+                    <div iec-id="edt-address" class="editable">
+                        <div class="editable-content">
+                            <h6>Physical Address</h6>
+                            <input type="text" class="subtext-light editable-editable form-control form-control-sm" value="dd" readonly></input>
+                        </div>
+                        <h4 class="editable-toggle">edit</h4>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    <button id="btn-vote" type="button" class="btn btn-warning" style="align-self:flex-end">Vote</button>
+
+                </div>
+                
+            </div>
+
+
+            <div class="modal fade" id="modal-voting" tabindex="-1" aria-labelledby="modal-title-voting" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title-voting">Voting -</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+    
+                    <div class="modal-body" id="body-ballot">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btn-negative-voting" type="button" class="btn btn-secondary" >Close</button>
+                        <button id="btn-positive-voting" type="button" class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/APIManager.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./js/Common.js"></script>
+    <script src="./js/Ballot.js"></script>
+     <script src="./js/Voter.js"></script>
+
+  </body>
+</html>

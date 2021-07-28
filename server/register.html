@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>IEC Voting - Register</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="login-comtainer">
+        <div class="banner-container">
+          <img src="./img/assets/banner.jpg" alt="" class="banner">
+        </div>
+        <div class="form-container">
+          <form action="#" method="POST" class="auth gp-16" id="auth-form">
+            <div class="row justify-content-center">
+              <img src="./img/assets/logo.png" alt="" class="logo">
+            </div>
+            <div class="row text-center">
+              <h4 class="header-label">Welcome</h4>
+            </div>
+            <div class="row text-center form-item-space">
+              <h6 class="sub-text-dark">Register</h6>
+            </div>
+   
+            <div class="divider form-item-space"></div>
+            <div class="row form-item-space ">
+              <h6   id="s-error" class="s-error hidden">invalid password</h6>
+            </div>
+            <div class="row form-item-space">
+                <label id="label-username" for="inp-username" class="form-label">IEC ID</label>
+                <input id="inp-username" type="input" class="form-control">
+            </div>
+            <div class="row form-item-space">
+                <label id="label-first-name" for="inp-first-name" class="form-label">First Name</label>
+                <input id="inp-first-name" type="input" class="form-control">
+            </div>
+            <div class="row form-item-space">
+                <label id="label-last-name" for="inp-last-name" class="form-label">Last Name</label>
+                <input id="inp-last-name" type="input" class="form-control">
+            </div>
+            <div class="row form-item-space">
+              <label id="label-password" for="inp-password" class="form-label">Password</label>
+              <input id="inp-password" type="password" class="form-control">
+            </div>
+            <div class="row form-item-space">
+                <label id="label-confirm-password" for="inp-confirm-password" class="form-label">Confirm Password</label>
+                <input id="inp-confirm-password" type="password" class="form-control">
+              </div> 
+            <div class="row form-item-space">
+              <button type="submit" class="btn btn-primary" style="width: fit-content;">Register</button>
+            </div>
+            <div class="row form-item-space">
+              <a id="link-login" href="./index.html" class="link">Already have an account? Login here</a>
+            </div>
+
+          </form>
+          </div>
+
+      </div>
+
+     
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./js/register.js"></script>
+
+  </body>
+</html>

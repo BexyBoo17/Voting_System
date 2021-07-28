@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>IEC Voting - Voter</title>
+  </head>
+  <body>
+    <div class="container-fluid" style="padding: 0px; margin: 0px;">
+        <header>
+            <nav class="navbar navbar-expand-lg" style="padding: 0px;">
+               
+                 <img src="./img/assets/logo.png" alt="" class="logo-small">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav"  style="height: 96px;">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="./iec_voter.html">Home</a>
+                      </li>
+                      <li class="nav-item nav-item-selected">
+                        <a class="nav-link" href="./iec_political_parties.html">Political Parties</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./iec_voting_destricts.html">Voting District</a>
+                      </li>
+                    </ul>
+                  </div>
+                
+              </nav>
+  
+      
+        </header>
+        <div class="main-container">
+          <div class="iec-section">
+
+            <div class="img-btn" data-bs-toggle="modal" data-bs-target="#register_user">
+              <img src="./img/assets/add.svg" alt="" class="img-btn-img">
+              <h6 class="img-btn-btn">Register Political Party</h6>
+            </div>
+            <div class="divider"></div>
+            <div id="list-parties" class="list">
+            
+            </div>
+
+
+            <div class="modal fade" id="register_user" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+                      <div id="container-picker" class="container-picker">
+                          <form action="#" method="POST" class="form-user" id="form-party">
+                              <div class="row justify-content-center">
+                                <img src="./img/assets/add.svg" alt="" class="logo-form dotted-sm">
+                              </div>
+                              <div class="row text-center">
+                                <h4 class="sub-text-dark">Register Political Party</h4>
+                              </div>
+                              <div class="divider form-item-space"></div>
+                              <div class="row form-item-space ">
+                                  <h6   id="s-error" class="s-error hidden">invalid password</h6>
+                                </div>
+                                <div class="row form-item-space">
+                                    <label id="label-name" for="inp-name" class="form-label">Name</label>
+                                    <input id="inp-name" type="input" class="form-control">
+                                </div>
+                                <div class="row form-item-space">
+                                  <label id="label-logo" for="sel-logo" class="form-label">Logo</label>
+                                  <input id="inp-logo" type="file" class="form-control">
+                                </div>
+                            </form>
+                      </div>
+  
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button id="btn-reg-party" type="button" class="btn btn-primary">Register</button>
+                  </div>
+              </div>
+              </div>
+          </div>
+
+          <div class="modal fade" id="register_candi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Register Candidate</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="container-picker-candi" class="container-picker">
+                         <form action="#" method="POST" class="form-user" id="form-party">
+                          <div class="row justify-content-center">
+                            <img src="./img/assets/add.svg" alt="" class="logo">
+                          </div>
+                          <div class="row text-center">
+                            <h4 class="sub-text-dark">Register Ward Candidate</h4>
+                          </div>
+                          <div class="divider form-item-space"></div>
+                          <div class="row form-item-space ">
+                              <h6   id="s-error-candi" class="s-error hidden">invalid password</h6>
+                            </div>
+                            <div class="row form-item-space">
+                                <label id="label-name" for="inp-name-candi" class="form-label">Name</label>
+                                <input id="inp-name-candi" type="input" class="form-control">
+                            </div>
+                            <div class="row form-item-space">
+                              <label id="label-ward" for="sel-ward" class="form-label">Ward</label>
+                              <div iec-id="picker-reg-candi" id="sel-ward" class="picker" placeholder="Select Ward">
+                                  <h6 class="picker-label"></h6>
+                                  <img src="./img/assets/right-arrow.svg" alt="" class="picker-btn">
+                              </div>
+                            </div>
+                        </form>
+ 
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="btn-reg-candi" type="button" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+          </div>
+      </div>
+    </div>
+    <script src="./js/APIManager.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./js/Common.js"></script>
+    <script src="./js/WardPicker.js"></script>
+    <script src="./js/Parties.js"></script>
+  </body>
+</html>
