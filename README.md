@@ -5,7 +5,11 @@ Server File Contains:
 -PHP Backend
 -REST API
 -Javascript & HTML Functionality 
--mySQL Database Dump
+
 
 Java Reporting File Contains:
 -Java Programme to report on the state of the database
+
+SQL File Contains:
+-Database dump
+-Table Creation Script
