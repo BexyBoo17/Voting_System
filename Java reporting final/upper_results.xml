@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="15.0.2" class="java.beans.XMLDecoder">
+ <object class="votereport.ResultList">
+  <void property="results">
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="votereport.Result">
+      <void property="minicipalityName">
+       <string>Amajuba District</string>
+      </void>
+      <void property="partyName">
+       <string>ANC</string>
+      </void>
+      <void property="zVotes">
+       <int>6</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="votereport.Result">
+      <void property="minicipalityName">
+       <string>Amajuba District</string>
+      </void>
+      <void property="partyName">
+       <string>DA</string>
+      </void>
+      <void property="zVotes">
+       <int>3</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="votereport.Result">
+      <void property="minicipalityName">
+       <string>Capricorn District</string>
+      </void>
+      <void property="partyName">
+       <string>ANC</string>
+      </void>
+      <void property="zVotes">
+       <int>3</int>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="votereport.Result">
+      <void property="minicipalityName">
+       <string>Capricorn District</string>
+      </void>
+      <void property="partyName">
+       <string>DA</string>
+      </void>
+      <void property="zVotes">
+       <int>1</int>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
